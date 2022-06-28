@@ -38,7 +38,7 @@ const loadMenu = () => {
         "Red Bean",
     ];
 
-    createList = (items, group) => {
+    const createList = (items, group) => {
         for (let i = 0; i < items.length; i++) {
             let item = document.createElement('li');
             item.innerText =items[i];
@@ -58,3 +58,5 @@ const loadMenu = () => {
 
     return element;
 }
+
+export { loadMenu };
