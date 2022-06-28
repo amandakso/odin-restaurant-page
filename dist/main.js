@@ -16,7 +16,17 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _loadHomePage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./loadHomePage */ \"./src/loadHomePage.js\");\n\n\nlet element = (0,_loadHomePage__WEBPACK_IMPORTED_MODULE_0__.loadHomePage)();\nconst content = document.getElementById(\"content\");\ncontent.appendChild(element);\n\nconsole.log(\"success\");\n\n//# sourceURL=webpack://odin-restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _loadHomePage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./loadHomePage */ \"./src/loadHomePage.js\");\n/* harmony import */ var _loadContactPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./loadContactPage */ \"./src/loadContactPage.js\");\n\n\n\nconst content = document.getElementById(\"content\");\n\nconst container = document.createElement('div');\ncontainer.classList.add(\"container\");\n\n\n// append navbar\nconst navbar = document.createElement('div');\nconst navItems = document.createElement('ul');\nlet nav1 = document.createElement('li');\nlet nav1Link = document.createElement('a')\nnav1Link.innerText = \"Home\";\nnav1Link.href = \"#\";\nnav1.appendChild(nav1Link);\n\nlet nav2 = document.createElement('li');\nlet nav2Link = document.createElement('a');\nnav2Link.innerText = \"Menu\";\nnav2Link.href= \"#\";\nnav2.appendChild(nav2Link);\n\nlet nav3 = document.createElement('li');\nlet nav3Link = document.createElement('a');\nnav3Link.innerText = \"Contact Us\";\nnav3Link.href = \"#\";\nnav3.appendChild(nav3Link);\n\nnavbar.appendChild(nav1);\nnavbar.appendChild(nav2);\nnavbar.appendChild(nav3);\n\ncontent.appendChild(navbar);\n\n\n// append container\nlet element = (0,_loadHomePage__WEBPACK_IMPORTED_MODULE_0__.loadHomePage)();\ncontent.appendChild(element);\n\n\n\n\n// append footer\nlet footer = document.createElement('div');\nfooter.innerText = \"Created by Amanda Panda for the Odin Project\";\ncontent.appendChild(footer);\n\n\nconsole.log(\"success\");\n\n//# sourceURL=webpack://odin-restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/loadContactPage.js":
+/*!********************************!*\
+  !*** ./src/loadContactPage.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadContactPage\": () => (/* binding */ loadContactPage)\n/* harmony export */ });\nconst loadContactPage = () => {\n    const element = document.createElement('div');\n\n    const contactName = document.createElement('h1');\n    contactName.innerText = \"Contact Us\";\n    element.appendChild(contactName);\n\n    const phoneNumber = document.createElement('h4');\n    phoneNumber.innerText = \"Phone Number: 1-(800)-BOBATEA\";\n    element.appendChild(phoneNumber);\n\n    const emailAddress = document.createElement('h4');\n    emailAddress.innerText = \"Email: info@bobatea.com\";\n    element.appendChild(emailAddress);\n\n    return element;\n}\n\n\n\n//# sourceURL=webpack://odin-restaurant-page/./src/loadContactPage.js?");
 
 /***/ }),
 
